@@ -31,7 +31,7 @@ const products = [
         images: ['images/musculosanegraid2.jpg', 'images/musculosanegraid2f2.jpg'],
         emoji: '🖤',
         sizes: ['Talle 2'],
-        sold: false
+        sold: true
     },
     {
         id: 3,
@@ -52,7 +52,7 @@ const products = [
         images: ['images/shortnikeid4.jpg', 'images/shortnikeid4f2.jpg'],
         emoji: '🩳',
         sizes: ['Talle 2'],
-        sold: false
+        sold: true
     },
     {
         id: 5,
