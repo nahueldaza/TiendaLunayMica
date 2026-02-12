@@ -6,18 +6,19 @@
 }
 
 :root {
-    --primary-color: #d946a6;
-    --primary-dark: #be185d;
-    --secondary-color: #f5f3ff;
-    --accent-color: #ec4899;
+    --primary-color: #003D99;
+    --primary-dark: #002966;
+    --secondary-color: #f0f4ff;
+    --accent-color: #0052CC;
     --accent-warm: #f97316;
     --accent-cool: #06b6d4;
     --text-primary: #1d1d1f;
     --text-secondary: #86868b;
     --border-color: #e5e5e7;
-    --shadow-sm: 0 1px 3px rgba(217, 70, 166, 0.08);
-    --shadow-md: 0 4px 12px rgba(217, 70, 166, 0.12);
-    --shadow-lg: 0 8px 24px rgba(217, 70, 166, 0.15);
+    --shadow-sm: 0 1px 3px rgba(0, 61, 153, 0.08);
+    --shadow-md: 0 4px 12px rgba(0, 61, 153, 0.12);
+    --shadow-lg: 0 8px 24px rgba(0, 61, 153, 0.15);
+    --deseocamila: #5353c5;
 }
 
 body {
@@ -38,9 +39,9 @@ body {
 
 /* Header - Minimalista con color */
 .header {
-    background: linear-gradient(135deg, rgba(217, 70, 166, 0.95) 0%, rgba(236, 72, 153, 0.95) 100%);
+    background: linear-gradient(135deg, rgba(0, 41, 102, 0.9) 0%, rgba(0, 61, 153, 0.95) 100%);
     backdrop-filter: blur(20px);
-    border-bottom: 1px solid rgba(217, 70, 166, 0.2);
+    border-bottom: 1px solid rgba(0, 61, 153, 0.2);
     padding: 1rem 0;
     position: sticky;
     top: 0;
@@ -67,12 +68,12 @@ body {
     border-radius: 12px;
     object-fit: cover;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    box-shadow: 0 4px 12px rgba(217, 70, 166, 0.2);
+    box-shadow: 0 4px 12px rgba(0, 61, 153, 0.2);
 }
 
 .logo-img:hover {
     transform: scale(1.05);
-    box-shadow: 0 8px 20px rgba(217, 70, 166, 0.3);
+    box-shadow: 0 8px 20px rgba(0, 61, 153, 0.3);
 }
 
 .logo {
@@ -83,7 +84,7 @@ body {
 }
 
 .cart-btn {
-    background: white;
+    background: rgba(230, 231, 236, 0.8);
     color: var(--primary-color);
     border: none;
     padding: 0.75rem 1.5rem;
@@ -120,11 +121,11 @@ body {
 
 /* Filtros - Limpio y moderno con color */
 .filters {
-    background: linear-gradient(135deg, #fff5fb 0%, #f5f3ff 100%);
+    background: linear-gradient(135deg, #e8f0ff 0%, #f0f4ff 100%);
     padding: 2rem 1.5rem;
     margin: 3rem 0;
     border-radius: 18px;
-    border: 2px solid rgba(217, 70, 166, 0.1);
+    border: 2px solid rgba(0, 61, 153, 0.8);
 }
 
 .filters h2 {
@@ -137,7 +138,7 @@ body {
 
 .filter-btn {
     background: white;
-    border: 1.5px solid rgba(217, 70, 166, 0.3);
+    border: 1.5px solid rgba(0, 61, 153, 0.8);
     padding: 0.75rem 1.25rem;
     margin: 0.5rem;
     border-radius: 50px;
@@ -150,7 +151,7 @@ body {
 
 .filter-btn:hover {
     border-color: var(--primary-color);
-    background: rgba(217, 70, 166, 0.05);
+    background: rgba(0, 61, 153, 0.85);
     transform: translateY(-1px);
 }
 
@@ -158,7 +159,7 @@ body {
     background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
     color: white;
     border-color: var(--primary-color);
-    box-shadow: 0 4px 12px rgba(217, 70, 166, 0.3);
+    box-shadow: 0 4px 12px rgba(0, 61, 153, 0.8)  ;
 }
 
 /* Sección de Productos */
@@ -171,7 +172,7 @@ body {
     font-weight: 700;
     margin-bottom: 2.5rem;
     text-align: center;
-    color: var(--text-primary);
+    color: var(--deseocamila);
     letter-spacing: -0.5px;
 }
 
@@ -187,7 +188,7 @@ body {
     background: #ffffff;
     border-radius: 18px;
     overflow: hidden;
-    border: 1px solid var(--border-color);
+    border: 1px solid var(--deseocamila);
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     display: flex;
     flex-direction: column;
@@ -195,23 +196,55 @@ body {
 }
 
 .product-card:hover {
-    border-color: rgba(217, 70, 166, 0.4);
-    box-shadow: 0 12px 32px rgba(217, 70, 166, 0.2);
+    border-color: rgba(0, 61, 153, 0.8);
+    box-shadow: 0 12px 32px rgba(0, 61, 153, 0.8);
     transform: translateY(-6px);
 }
 
 .product-card:hover .product-image-emoji {
-    background: linear-gradient(135deg, rgba(236, 72, 153, 0.1) 0%, rgba(249, 115, 22, 0.1) 100%);
+    background: linear-gradient(135deg, rgba(0, 82, 204, 0.1) 0%, rgba(249, 115, 22, 0.1) 100%);
 }
 
 .product-card:hover .product-carousel {
-    background: linear-gradient(135deg, rgba(236, 72, 153, 0.1) 0%, rgba(249, 115, 22, 0.1) 100%);
+    background: linear-gradient(135deg, rgba(111, 101, 209, 0.1) 0%, rgba(249, 115, 22, 0.1) 100%);
+}
+
+/* Badge VENDIDO */
+.product-card.sold {
+    position: relative;
+    opacity: 0.85;
+}
+
+.product-card.sold::before {
+    content: 'VENDIDO';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(220, 38, 38, 0.95) 0%, rgba(175, 0, 0, 0.95) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: white;
+    letter-spacing: 1px;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+    z-index: 20;
+    border-radius: 18px;
+}
+
+.product-card.sold .btn-add-cart {
+    background: #999 !important;
+    cursor: not-allowed !important;
+    opacity: 0.6;
 }
 
 .product-image {
     width: 100%;
     height: 240px;
-    background: linear-gradient(135deg, rgba(255, 245, 251, 0.5) 0%, rgba(245, 243, 255, 0.5) 100%);
+    background: linear-gradient(135deg, rgba(232, 240, 255, 0.5) 0%, rgba(240, 244, 255, 0.5) 100%);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -223,7 +256,7 @@ body {
 .product-image-emoji {
     width: 100%;
     height: 240px;
-    background: linear-gradient(135deg, rgba(255, 245, 251, 0.5) 0%, rgba(245, 243, 255, 0.5) 100%);
+    background: linear-gradient(135deg, rgba(232, 240, 255, 0.5) 0%, rgba(240, 244, 255, 0.5) 100%);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -236,7 +269,7 @@ body {
     position: relative;
     width: 100%;
     height: 240px;
-    background: linear-gradient(135deg, rgba(255, 245, 251, 0.5) 0%, rgba(245, 243, 255, 0.5) 100%);
+    background: linear-gradient(135deg, rgba(0, 61, 153, 0.15) 0%, rgba(0, 82, 204, 0.15) 100%);
     overflow: hidden;
 }
 
@@ -263,7 +296,7 @@ body {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: rgba(217, 70, 166, 0.8);
+    background: rgba(0, 61, 153, 0.8);
     color: white;
     border: none;
     width: 40px;
@@ -279,7 +312,7 @@ body {
 }
 
 .carousel-btn:hover {
-    background: rgba(217, 70, 166, 1);
+    background: rgba(0, 61, 153, 0.8);
     transform: translateY(-50%) scale(1.1);
 }
 
@@ -355,7 +388,7 @@ body {
 
 .product-price {
     font-size: 1.4rem;
-    color: var(--primary-color);
+    color: var(--deseocamila);
     font-weight: 600;
     margin-bottom: 1.5rem;
     letter-spacing: -0.3px;
@@ -369,7 +402,7 @@ body {
     display: block;
     font-weight: 600;
     margin-bottom: 0.75rem;
-    color: var(--text-primary);
+    color: var(--deseocamila);
     font-size: 0.95rem;
 }
 
@@ -388,12 +421,12 @@ body {
     font-size: 0.9rem;
     font-weight: 500;
     background: #ffffff;
-    color: var(--text-primary);
+    color: var(--deseocamila);
 }
 
 .size-option:hover {
-    border-color: var(--primary-color);
-    background: rgba(217, 70, 166, 0.05);
+    border-color: var(--deseocamila);
+    background: rgba(0, 61, 153, 0.05);
 }
 
 .size-option.selected {
@@ -422,7 +455,7 @@ body {
 
 .btn-primary:hover {
     transform: translateY(-2px);
-    box-shadow: 0 8px 24px rgba(217, 70, 166, 0.4);
+    box-shadow: 0 8px 24px rgba(0, 61, 153, 0.4);
 }
 
 .btn-primary:active {
@@ -430,14 +463,22 @@ body {
 }
 
 .btn-add-cart {
-    background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
+    background: linear-gradient(135deg, var(--deseocamila   ) 0%, var(--accent-color) 100%);
     color: white;
     width: 100%;
 }
 
 .btn-add-cart:hover {
     transform: translateY(-2px);
-    box-shadow: 0 8px 24px rgba(217, 70, 166, 0.4);
+    box-shadow: 0 8px 24px rgba(79, 65, 206, 0.4);
+}
+
+.btn-add-cart:disabled {
+    background: #999 !important;
+    cursor: not-allowed !important;
+    opacity: 0.6;
+    transform: none !important;
+    box-shadow: none !important;
 }
 
 /* Modal de Foto Detallada */
@@ -509,7 +550,7 @@ body {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: rgba(217, 70, 166, 0.85);
+    background: rgba(0, 61, 153, 0.8);
     color: white;
     border: none;
     width: 50px;
@@ -525,7 +566,7 @@ body {
 }
 
 .photo-nav-btn:hover {
-    background: rgba(217, 70, 166, 1);
+    background: rgba(0, 61, 153, 0.8);
     transform: translateY(-50%) scale(1.1);
 }
 
@@ -549,7 +590,7 @@ body {
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    background: rgba(217, 70, 166, 0.3);
+    background: rgba(0, 61, 153, 0.3);
     cursor: pointer;
     transition: all 0.3s ease;
     border: 2px solid transparent;
@@ -563,7 +604,7 @@ body {
 }
 
 .photo-indicator:hover {
-    background: rgba(217, 70, 166, 0.6);
+    background: rgba(0, 61, 153, 0.8);
 }
 .modal {
     display: none;
@@ -573,7 +614,7 @@ body {
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(217, 70, 166, 0.3);
+    background-color: rgba(0, 61, 153, 0.3);
     backdrop-filter: blur(10px);
     animation: fadeIn 0.3s ease;
 }
@@ -595,11 +636,11 @@ body {
     border-radius: 24px;
     width: 90%;
     max-width: 520px;
-    box-shadow: 0 12px 48px rgba(217, 70, 166, 0.2);
+    box-shadow: 0 12px 48px rgba(0, 61, 153, 0.2);
     max-height: 85vh;
     overflow-y: auto;
     animation: slideIn 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    border: 2px solid rgba(217, 70, 166, 0.15);
+    border: 2px solid rgba(0, 61, 153, 0.15);
 }
 
 @keyframes slideIn {
@@ -636,7 +677,7 @@ body {
 }
 
 .cart-items {
-    border-bottom: 2px solid rgba(217, 70, 166, 0.1);
+    border-bottom: 2px solid rgba(0, 61, 153, 0.1);
     padding-bottom: 1.5rem;
     margin-bottom: 1.5rem;
 }
@@ -646,7 +687,7 @@ body {
     justify-content: space-between;
     align-items: flex-start;
     padding: 1.25rem 0;
-    border-bottom: 1px solid rgba(217, 70, 166, 0.08);
+    border-bottom: 1px solid rgba(0, 61, 153, 0.08);
     gap: 1rem;
 }
 
@@ -671,7 +712,7 @@ body {
     gap: 0.75rem;
     align-items: center;
     margin: 0.75rem 0;
-    background: rgba(217, 70, 166, 0.08);
+    background: rgba(0, 61, 153, 0.08);
     padding: 0.5rem;
     border-radius: 10px;
     width: fit-content;
@@ -747,12 +788,12 @@ body {
 
 /* Footer */
 .footer {
-    background: linear-gradient(135deg, #fff5fb 0%, #f5f3ff 100%);
+    background: linear-gradient(135deg, #e8f0ff 0%, #f0f4ff 100%);
     color: var(--text-secondary);
     text-align: center;
     padding: 3rem 0;
     margin-top: 4rem;
-    border-top: 2px solid rgba(217, 70, 166, 0.1);
+    border-top: 2px solid rgba(0, 61, 153, 0.1);
     font-size: 0.85rem;
 }
 

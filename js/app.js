@@ -1,22 +1,37 @@
+// ===== GUÍA PARA MARCAR PRODUCTOS COMO VENDIDO =====
+// Cambiar: sold: false → sold: true
+// Ejemplo:
+// {
+//     id: 1,
+//     name: 'Musculosa Blanco Crema',
+//     ...
+//     sold: true  ← Cambiar esto para marcar como vendido
+// }
+// ====================================================
+
 // Productos de la tienda
 const products = [
     {
         id: 1,
-        name: 'Remera Básica Blanca',
+        name: 'Musculosa Blanco Crema',
         category: 'remeras',
-        price: 19.99,
-        description: 'Camiseta de algodón 100% cómoda y duradera',
+        price: 2000,
+        description: 'Nueva ',
+        images: ['images/musculosablancaid1.jpeg', 'images/musculosablancaid1f2.jpeg'],   
         emoji: '👕',
-        sizes: ['XS', 'S', 'M', 'L', 'XL', 'XXL']
+        sizes: ['Talle 2'],
+        sold: false
     },
     {
         id: 2,
-        name: 'Remera Negra Basica',
+        name: 'Musculosa Negra',
         category: 'remeras',
-        price: 24.99,
-        description: 'Camiseta premium con acabados de calidad',
+        price: 2000,
+        description: 'Musculosa negra con tirantes de plastico',
+        images: ['images/musculosanegraid2.jpg', 'images/musculosanegraid2f2.jpg'],
         emoji: '🖤',
-        sizes: ['S', 'M', 'L', 'XL']
+        sizes: ['Talle 2'],
+        sold: false
     },
     {
         id: 3,
@@ -25,26 +40,30 @@ const products = [
         price: 49.99,
         description: 'Jeans ajustado con estilo clásico',
         emoji: '👖',
-        sizes: ['XS', 'S', 'M', 'L', 'XL']
+        sizes: ['XS', 'S', 'M', 'L', 'XL'],
+        sold: false
     },
     {
         id: 4,
         name: 'Short Nike Bordo',
         category: 'shorts',
-        price: 1000,
+        price: 2000,
         description: 'Short deportivo Nike ultra cómodo y resistente',
-        images: ['images/shortid4.jpeg', 'images/shortid4f2.jpeg'],
+        images: ['images/shortnikeid4.jpg', 'images/shortnikeid4f2.jpg'],
         emoji: '🩳',
-        sizes: ['Talle Unico']
+        sizes: ['Talle 2'],
+        sold: false
     },
     {
-        id: 5,  
-        name: 'Vestido',
-        category: 'vestidos',
-        price: 59.99,
-        description: 'Vestido rojo versátil para cualquier ocasión',
-        emoji: '👗',
-        sizes: ['XS', 'S', 'M', 'L']
+        id: 5,
+        name: 'Short negro',
+        category: 'shorts',
+        price: 2000,
+        description: 'Short negro con rayas blancas',
+        images: ['images/shortnegrorayasid5.jpeg'],
+        emoji: '🩳',
+        sizes: ['Talle 2'],
+        sold: false
     },
     {
         id: 6,
@@ -53,7 +72,8 @@ const products = [
         price: 79.99,
         description: 'Vestido negro sofisticado y elegante',
         emoji: '💃',
-        sizes: ['XS', 'S', 'M', 'L', 'XL']
+        sizes: ['XS', 'S', 'M', 'L', 'XL'],
+        sold: false
     },
     {
         id: 7,
@@ -62,7 +82,8 @@ const products = [
         price: 14.99,
         description: 'Campera de jean cómoda y de moda',
         emoji: '🧥',
-        sizes: ['One Size']
+        sizes: ['One Size'],
+        sold: false
     },
     {
         id: 8,
@@ -71,7 +92,8 @@ const products = [
         price: 24.99,
         description: 'Campera slim de lana suave y caliente',
         emoji: '🧥',
-        sizes: ['One Size']
+        sizes: ['One Size'],
+        sold: false
     },
     {
         id: 9,
@@ -80,16 +102,19 @@ const products = [
         price: 89.99,
         description: 'Sueter elegante de lana de alta calidad',
         emoji: '🧣',
-        sizes: ['One Size']
+        sizes: ['One Size'],
+        sold: false
     },
     {
         id: 10,
-        name: 'Remera Manga Larga',
+        name: 'Musculosa blanca',
         category: 'remeras',
-        price: 22.99,
-        description: 'Camiseta con estampado colorido',
+        price: 2000,
+        description: 'Musculosa blanca rayada con dibujos ',
+        images: ['images/musculosarayadaid10.jpeg', 'images/musculosarayadaid10f2.jpeg'],
         emoji: '🌈',
-        sizes: ['S', 'M', 'L', 'XL']
+        sizes: ['Talle 2'],
+        sold: false
     }
 ];
 
@@ -190,6 +215,9 @@ function renderProducts(productsToRender) {
     productsToRender.forEach(product => {
         const card = document.createElement('div');
         card.className = 'product-card';
+        if (product.sold) {
+            card.classList.add('sold');
+        }
         
         const sizesHTML = product.sizes.map(size => 
             `<button class="size-option" data-size="${size}">${size}</button>`
@@ -235,8 +263,8 @@ function renderProducts(productsToRender) {
                         ${sizesHTML}
                     </div>
                 </div>
-                <button class="btn btn-add-cart" data-product-id="${product.id}">
-                    Agregar al Carrito
+                <button class="btn btn-add-cart" data-product-id="${product.id}" ${product.sold ? 'disabled' : ''}>
+                    ${product.sold ? 'Producto Vendido' : 'Agregar al Carrito'}
                 </button>
             </div>
         `;
