@@ -35,12 +35,13 @@ const products = [
     },
     {
         id: 3,
-        name: 'Jeans Azul Clásico',
-        category: 'jeans',
-        price: 49.99,
-        description: 'Jeans ajustado con estilo clásico',
-        emoji: '👖',
-        sizes: ['XS', 'S', 'M', 'L', 'XL'],
+        name: 'Musculosa Negra',
+        category: 'remeras',
+        price: 2000,
+        description: 'En perfecto estado',
+        images: ['images/musculosaid3.jpg', 'images/musculosaid3f2.jpg'],
+        emoji: '🖤',
+        sizes: ['Talle 2'],
         sold: false
     },
     {
