@@ -68,46 +68,6 @@ const products = [
     },
     {
         id: 6,
-        name: 'Vestido',
-        category: 'vestidos',
-        price: 79.99,
-        description: 'Vestido negro sofisticado y elegante',
-        emoji: '💃',
-        sizes: ['XS', 'S', 'M', 'L', 'XL'],
-        sold: false
-    },
-    {
-        id: 7,
-        name: 'Campera de Jean',
-        category: 'abrigos',
-        price: 14.99,
-        description: 'Campera de jean cómoda y de moda',
-        emoji: '🧥',
-        sizes: ['One Size'],
-        sold: false
-    },
-    {
-        id: 8,
-        name: 'Campera Slim',
-        category: 'abrigos',
-        price: 24.99,
-        description: 'Campera slim de lana suave y caliente',
-        emoji: '🧥',
-        sizes: ['One Size'],
-        sold: false
-    },
-    {
-        id: 9,
-        name: 'Sueter',
-        category: 'abrigos',
-        price: 89.99,
-        description: 'Sueter elegante de lana de alta calidad',
-        emoji: '🧣',
-        sizes: ['One Size'],
-        sold: false
-    },
-    {
-        id: 10,
         name: 'Musculosa blanca',
         category: 'remeras',
         price: 2000,
